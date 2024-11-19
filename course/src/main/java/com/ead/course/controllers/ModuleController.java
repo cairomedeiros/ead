@@ -73,7 +73,7 @@ public class ModuleController {
     }
 
     @GetMapping("/courses/{courseId}/modules/{moduleId}")
-    public ResponseEntity<Object> getOneModulee(@PathVariable(value = "courseId") UUID courseId,
+    public ResponseEntity<Object> getOneModule(@PathVariable(value = "courseId") UUID courseId,
                                                @PathVariable(value = "moduleId") UUID moduleId){
         Optional<ModuleModel> moduleModelOptional = moduleService.findModuleIntoCourse(courseId, moduleId);
         if(!moduleModelOptional.isPresent()){
