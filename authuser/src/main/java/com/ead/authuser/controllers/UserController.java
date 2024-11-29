@@ -42,7 +42,7 @@ public class UserController {
         if(courseId != null){
             userModelPage = userService.findAll(SpecificationTemplate.userCourseId(courseId).and(spec), pageable);
         }else {
-            userService.findAll(spec, pageable);
+            userModelPage = userService.findAll(spec, pageable);
         }
 
         if(!userModelPage.isEmpty()){
