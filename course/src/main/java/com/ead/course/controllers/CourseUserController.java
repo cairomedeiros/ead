@@ -1,6 +1,6 @@
 package com.ead.course.controllers;
 
-import com.ead.course.clients.CourseClient;
+import com.ead.course.clients.AuthUserClient;
 import com.ead.course.dtos.SubscriptionDto;
 import com.ead.course.dtos.UserDto;
 import com.ead.course.models.CourseModel;
@@ -9,7 +9,6 @@ import com.ead.course.services.CourseService;
 import com.ead.course.services.CourseUserService;
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,7 +27,7 @@ import java.util.UUID;
 public class CourseUserController {
 
     @Autowired
-    CourseClient courseClient;
+    AuthUserClient courseClient;
 
     @Autowired
     CourseService courseService;
