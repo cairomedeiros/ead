@@ -23,6 +23,8 @@ spring:
   output:
     ansi:
       enabled: Always
+  rabbitmq:
+    addresses: amqps://hlcremvl:sSuoIoIRDw1ZNMU0sAwlN-GzeoWZ6iHk@shark.rmq.cloudamqp.com/hlcremvl
 
 logging:
   level:
